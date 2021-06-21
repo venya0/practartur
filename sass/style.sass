@@ -1,3 +1,12 @@
+@import "reset"
+@import "vars"
+@import "header"
+@import "title"
+@import "products"
+@import "banner"
+@import "footer"
+@import single-page/_single-product.sass
+
 .font-regular
     font-family: 'Lato', sans-serif
     font-weight: normal
@@ -7,6 +16,12 @@
 .font-bold
     font-family: 'Lato', sans-serif
     font-weight: bold
+    font-stretch: normal
+    font-style: normal
+
+.font-bolder
+    font-family: 'Lato', sans-serif
+    font-weight: 900
     font-stretch: normal
     font-style: normal
 
@@ -21,3 +36,42 @@
     font-weight: normal
     font-stretch: normal
     font-style: italic
+
+.container 
+    width: 1140px
+
+.visually-hidden 
+    position: absolute
+    width: 1px
+    height: 1px
+    margin: -1px
+    padding: 0
+    overflow: hidden
+    border: 0
+    clip: rect(0 0 0 0)
+
+.button 
+    @extend .font-bold
+    font-size: 14px
+    line-height: normal
+    letter-spacing: normal
+    text-align: center
+    text-transform: uppercase
+    color: #d56d7d
+    padding: 19px 74px
+    border: solid 1px $brand-color
+    background-color: #ffffff
+    width: 100%
+    &:hover 
+        color: #4a4a4a
+        border: solid 1px #eaeaea
+    &__checkout
+        margin-top: 32px
+        &_add 
+            text-transform: capitalize
+            font-size: 16px
+            &:hover .fa-shopping-cart
+                color: #4b4b4b
+    &__start 
+        margin-top: 11px
+    

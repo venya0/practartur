@@ -1,0 +1,145 @@
+.items-box 
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 60px
+
+.shop-heading 
+    font-family: Lato
+    font-size: 30px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.8
+    letter-spacing: 0.75px
+    text-align: center
+    color: #222222
+    text-align: center
+
+.shop-text 
+    font-family: Lato
+    font-size: 14px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 3.86
+    letter-spacing: 0.35px
+    text-align: center
+    color: #9f9f9f
+
+.item 
+    width: 265px
+    display: flex
+    flex-direction: column
+    margin-bottom: 40px
+    position: relative
+
+.item:hover 
+    box-shadow:  0px 5px 8px 0 rgba(0, 0, 0, 0.16)
+
+.item:hover .item-image 
+    filter: brightness(50%)
+
+.item:hover .add-box 
+    display: flex
+
+.link_item 
+    text-decoration: none
+    display: block
+    width: 265px
+
+.item-image 
+    width: 100%
+
+.item-info 
+    padding: 15px
+
+.item-naming 
+    font-family: Lato
+    font-size: 13px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: normal
+    letter-spacing: normal
+    text-align: left
+    color: #222222
+    text-transform: uppercase
+
+.item-price 
+    font-family: Lato
+    font-size: 16px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: normal
+    letter-spacing: normal
+    text-align: left
+    color: #f16d7f
+    margin-top: 15px
+    &__single
+        margin-left: 0
+        align-self: flex-start
+
+.add 
+    display: flex
+    text-decoration: none
+    justify-content: center
+    align-items: center
+    border: solid 1px #ffffff
+    padding: 8px
+    &:hover
+        box-shadow: 0px 1px 19px 0px rgba(255,255,255,0.75)
+
+.add-box 
+    display: none
+    position: absolute
+    top: 98px
+    width: 100%
+
+.add-to-cart 
+    font-family: Lato
+    font-size: 13px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: normal
+    letter-spacing: normal
+    text-align: left
+    color: #ffffff
+    margin-left: 8px
+
+.browse 
+    display: flex
+    justify-content: center
+
+.details 
+    padding: 18px 18px 18px 0px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 1140px
+
+.summary 
+    display: block
+    text-align: center
+
+.summary_products 
+    background-color: #f16d7f
+    width: 212px
+    height: 48px
+    font-family: Lato
+    font-size: 16px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: 3
+    letter-spacing: 0.4px
+    text-align: center
+    color: #ffffff
+    border: 1px solid transparent
+
+.summary_products:hover 
+    background-color: #ffffff
+    color: #f16d7f
+    border: 1px solid #f16d7f
