@@ -1,0 +1,177 @@
+.bread
+    background-color: #f8f3f4
+    // padding: 65px 0px
+    height: 148px
+
+.bread-box
+    display: flex
+    // align-items: center
+    padding: 65px 0px
+
+.page-name
+    @extend .font-bolder
+    font-size: 24px
+    line-height: 0.83
+    letter-spacing: normal
+    color: #f16d7f
+    text-transform: uppercase
+
+.breadcrumb-link 
+    text-decoration: none
+    color: #636363
+    text-transform: uppercase
+    font-size: 14px
+    @extend .font-light
+    &_this
+        color: #f16d7f
+    &:hover
+        color: #d56d7d
+
+.slider-box
+    background-color: #f7f7f7
+    display: flex
+    min-height: 777px
+    position: relative
+    z-index: -1
+
+.arrow-box
+    align-self: center
+
+.slider-arrow 
+    font-size: 45px
+    background-color: #ffffff
+    color: #646464
+
+.product-description
+    position: absolute
+    background-color: #ffffff
+    // min-height: 730px
+    top: 690px
+    left: 0px
+    right: 0px
+    margin: auto
+    border: 1px solid #eaeaea
+    display: flex
+    flex-direction: column
+    justify-items: center
+
+.collection 
+    @extend .font-bold
+    color: $brand-color
+    font-size: 14px
+    text-align: center
+    text-transform: uppercase
+    margin-top: 73px
+
+.line-box
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    width: 147px
+    margin-bottom: 18px
+    margin-top: 15px
+
+.line-prod
+    width: 42px
+    min-height: 1px
+    background-color: #eaeaea
+    &_this
+        min-height: 2px
+        width: 63px
+        background-color: #ef5b70
+
+.prod-name
+    font-size: 18px
+    @extend .font-bolder
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 67px
+
+.prod-description
+    color: #5e5e5e
+    font-size: 14px
+    @extend .font-light
+    width: 54%
+    line-height: 1.71
+
+.characteristic
+    display: flex
+    justify-content: center
+    margin-top: 28px
+
+.parameter
+    font-size: 14px
+    @extend .font-bold
+    color: #2f2f2f
+    text-transform: uppercase
+    margin: 0
+    &:last-of-type
+        margin-left: 44px
+
+.setting
+    color: #b9b9b9
+    &::after
+        content: ": "
+
+.price
+    font-size: 24px
+    @extend .font-bold
+    color: #ef5b70
+    margin-top: 37px
+    margin-bottom: 43px
+
+.stripe
+    width: 642px
+    height: 1px
+    margin-bottom: 63px
+    background-color: #eaeaea
+
+.filter
+    margin-bottom: 28px
+
+.choose-characteristics
+    display: flex
+    justify-content: space-around
+
+.choose-box
+    display: flex
+    flex-direction: column
+    align-content: left
+    &:not(:last-of-type)
+        margin-right: 53px
+
+.form-select
+    width: 144px
+    &_number
+        background: none
+        padding-right: 5px
+
+.choose 
+    @extend .font-bold
+    color: #2f2f2f
+    font-size: 14px
+    text-transform: uppercase
+    margin-bottom: 14px
+    margin-left: 0
+
+.fa-shopping-cart
+    color: #ef5b70
+    margin-right: 15px
+    font-size: 24px
+
+.rec-head 
+    @extend .font-bolder
+    text-transform: uppercase
+    margin-top: 763px
+    text-align: center
+    line-height: 0.83
+    font-size: 24px
+    margin-bottom: 72px
+
+.rec-box
+    display: flex
+
+.item-info-box
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
