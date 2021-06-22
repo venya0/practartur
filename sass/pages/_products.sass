@@ -1,0 +1,121 @@
+.crumbs-box
+    display: flex
+    flex-wrap: wrap
+    padding: 0 0
+    list-style: none
+    align-items: baseline
+
+.breadcrumb-piece
+    padding-left: 5px
+    &:not(:first-of-type)::before
+        padding-right: 5px
+        color: #6c757d
+        content: "/"
+
+.catalog-box
+    display: flex
+    margin-top: 60px
+
+.side-bar
+    display: flex
+    flex-direction: column
+    margin: 0
+
+.accord
+    display: flex
+    position: relative
+    width: 243px
+    padding: 11px 6px 15px 11px
+    background-color: #fff
+    border: none
+    border-bottom: 1px solid #ebebeb
+    border-left: 5px solid $brand-color-bright
+    &:hover .accord-box
+        display: block
+        z-index: 1
+    &:hover 
+        margin-bottom: 450px
+
+.accord-name 
+    font-size: 14px
+    @extend .font-bold
+    color: $brand-color-bright
+    cursor: pointer
+    list-style-type: none
+    display: block
+    text-align: left
+    padding-left: 0
+    text-transform: uppercase
+    &::after
+        content: " \25bc"
+        font-size: 14px
+        margin-left: 130px
+       
+.accord-box 
+    width: 243px
+    display: none
+    position: absolute
+    top: 40px
+    padding-top: 20px
+
+.accord-list
+    text-align: left
+    
+.accord-link
+    color: #6f6e6e
+    @extend .font-regular
+    font-size: 14px
+    display: block
+    width: 100%
+    line-height: 2.36 
+    &:hover
+        color: $brand-color
+
+.filter-prod-box
+    margin-left: 50px
+
+.trending
+    width: 190px
+    display: flex
+    flex-direction: column
+
+.form-head
+    color: #6f6e6e
+    @extend .font-bold
+    font-size: 14px
+    text-transform: uppercase
+    margin-bottom: 25px
+
+.trends
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+
+.trend-li
+    color: #6f6e6e
+    @extend .font-regular
+    font-size: 14px
+    line-height: 1.86
+    margin: 0
+    text-transform: capitalize
+    &:not(:first-of-type)::before
+        padding-right: 10px
+        color: #dfdfdf
+        content: "\007C"
+    &:not(:last-of-type)
+        padding-right: 10px
+
+.size
+    width: 205px
+    display: flex
+    flex-wrap: wrap
+    justify-content: start
+
+.check-size
+    color: #6f6e6e
+    @extend .font-regular
+    text-transform: uppercase
+    margin-bottom: 16px
+    display: inline-block
+    // &:not(:last-of-type)
+    //     margin-right: 25px
