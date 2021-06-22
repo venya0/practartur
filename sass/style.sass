@@ -5,7 +5,8 @@
 @import "products"
 @import "banner"
 @import "footer"
-@import single-page/_single-product.sass
+@import pages/_single-product.sass
+@import pages/_products.sass
 
 .font-regular
     font-family: 'Lato', sans-serif
@@ -50,7 +51,7 @@
     border: 0
     clip: rect(0 0 0 0)
 
-.button 
+.buttonn 
     @extend .font-bold
     font-size: 14px
     line-height: normal
@@ -75,3 +76,9 @@
     &__start 
         margin-top: 11px
     
+.filter
+    margin-bottom: 28px
+    &__catalog
+        display: flex
+        justify-content: space-between
+

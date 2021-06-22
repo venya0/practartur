@@ -6,6 +6,7 @@
 .header-brand 
     display: flex
     flex-direction: row
+    margin-left: 0px
 
 .home 
     display: flex
@@ -35,7 +36,7 @@
 
 .summary_dropdown 
     width: 87px
-    height: 36px
+    height: 38px
     margin-top: 26px
     margin-left: 37px
     border: solid 1px #e6e6e6
@@ -70,7 +71,7 @@
         left: 69px
         transform: rotate(45deg)
 
-.dropdown-menu 
+.dropdown-m 
     display: block
     text-align: left
     color: #232323
@@ -106,6 +107,7 @@
 
 .form 
     display: flex
+    height: 38px
 
 .submit 
     width: 38px
@@ -123,6 +125,7 @@
     margin-top: 26px
     padding-left: 15px
     margin-right: 0px
+    @extend .font-light
 
 .search-area:focus 
     outline: none
@@ -132,6 +135,7 @@
     flex-direction: row
     align-items: center
     margin-top: 0px
+    margin-right: 0px
 
 .cart 
     position: relative
@@ -175,6 +179,13 @@
     border-bottom: 1px solid #ececec
     margin-bottom: 16px  
 
+
+.sinpage
+    display: flex
+    width: 100%
+    &:hover
+        filter: brightness(0.4)
+
 .chosen-text-box 
     display: flex
     flex-direction: column
@@ -213,6 +224,9 @@
     display: block
     margin: 0px
 
+.cancel:hover .fa-times-circle 
+    color: $brand-color
+
 .fa-times-circle 
     display: flex
     align-items: center
@@ -231,8 +245,6 @@
 .total-price 
     text-align: right
     padding-left: 130px
-
-
 
 .cart-img 
     width: 32px

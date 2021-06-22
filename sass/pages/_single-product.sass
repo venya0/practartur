@@ -1,11 +1,9 @@
 .bread
     background-color: #f8f3f4
-    // padding: 65px 0px
     height: 148px
 
 .bread-box
     display: flex
-    // align-items: center
     padding: 65px 0px
 
 .page-name
@@ -13,8 +11,12 @@
     font-size: 24px
     line-height: 0.83
     letter-spacing: normal
-    color: #f16d7f
+    color: $brand-color
     text-transform: uppercase
+    margin-left: 0
+
+.breadcrumb
+    margin-right: 0
 
 .breadcrumb-link 
     text-decoration: none
@@ -23,7 +25,7 @@
     font-size: 14px
     @extend .font-light
     &_this
-        color: #f16d7f
+        color: $brand-color
     &:hover
         color: #d56d7d
 
@@ -78,7 +80,7 @@
     &_this
         min-height: 2px
         width: 63px
-        background-color: #ef5b70
+        background-color: $brand-color-bright
 
 .prod-name
     font-size: 18px
@@ -116,7 +118,7 @@
 .price
     font-size: 24px
     @extend .font-bold
-    color: #ef5b70
+    color: $brand-color-bright
     margin-top: 37px
     margin-bottom: 43px
 
@@ -125,9 +127,6 @@
     height: 1px
     margin-bottom: 63px
     background-color: #eaeaea
-
-.filter
-    margin-bottom: 28px
 
 .choose-characteristics
     display: flex
@@ -155,7 +154,7 @@
     margin-left: 0
 
 .fa-shopping-cart
-    color: #ef5b70
+    color: $brand-color-bright
     margin-right: 15px
     font-size: 24px
 

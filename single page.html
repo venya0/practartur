@@ -10,6 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1d31a69545.js" crossorigin="anonymous"></script>    
 <link rel="stylesheet" href="css\style.css" type="text/css">
+<style>
+    *, ::after, ::before {
+    box-sizing: inherit;
+    }
+    button, form {
+        box-sizing: border-box;
+    }
+</style>
 </head>
 <body>
     <header>
@@ -24,7 +32,7 @@
                 <details class="dropdown_browse">
                     <summary class="summary summary_dropdown">Browse <i class="fas fa-sort-down"></i></summary>
                     <div class="details-browse">
-                        <h4 class="dropdown-menu">Woman</h4>
+                        <h4 class="dropdown-m">Woman</h4>
                         <a href="#" class="dropdown-links">Dresses</a>
                         <a href="#" class="dropdown-links">Tops</a>
                         <a href="#" class="dropdown-links">Sweaters/Knits</a>
@@ -39,14 +47,14 @@
                         <a href="#" class="dropdown-links">Nightwear</a>
                         <a href="#" class="dropdown-links">Shoes</a>
                         <a href="#" class="dropdown-links">Beauty</a>
-                        <h4 class="dropdown-menu">Man</h4>
+                        <h4 class="dropdown-m">Man</h4>
                         <a href="#" class="dropdown-links">Tees/Tank tops</a>
                         <a href="#" class="dropdown-links">Shirts/Polos</a>
                         <a href="#" class="dropdown-links">Sweaters</a>
                         <a href="#" class="dropdown-links">Sweatshirts/Hoodies</a>
                         <a href="#" class="dropdown-links">Blazers</a>
                         <a href="#" class="dropdown-links">Jackets/vests</a>
-                    </div>
+                </div>
                 </details>
                 <form class="form">
                     <input type="search" placeholder="Search for item..." class="search-area">
@@ -60,27 +68,31 @@
                     <img src="img/cart.png" alt="cart" class="cart-img">
                     <div class="cart-info">
                         <div class="chosen-item">
-                            <img src="img/chosen-1.jpg" alt="man T-shirt" class="chosen">
-                            <div class="chosen-text-box">
-                                <p class="chosen-name">Rebox Zane</p>
-                                <div class="stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i></div>
-                                <p class="chosen-price">1  x   $250</p>
-                            </div>
-                            <i class="fas fa-times-circle"></i>
+                            <a href="single page.html" class="sinpage">
+                                <img src="img/chosen-1.jpg" alt="man T-shirt" class="chosen">
+                                <div class="chosen-text-box">
+                                    <p class="chosen-name">Rebox Zane</p>
+                                    <div class="stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i></div>
+                                    <p class="chosen-price">1  x   $250</p>
+                                </div>
+                            </a>
+                            <a class="cancel" href="#"><i class="fas fa-times-circle"></i></a>
                         </div>
                         <div class="chosen-item">
-                            <img src="img/chosen-2.jpg" alt="woman dress" class="chosen">
-                            <div class="chosen-text-box">
-                                <p class="chosen-name">Rebox Zane</p>
-                                <div class="stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i></div>
-                                <p class="chosen-price">1  x   $250</p>
-                            </div>
-                            <i class="fas fa-times-circle"></i>
+                            <a href="single page.html" class="sinpage">
+                                <img src="img/chosen-2.jpg" alt="woman dress" class="chosen">
+                                <div class="chosen-text-box">
+                                    <p class="chosen-name">Rebox Zane</p>
+                                    <div class="stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i></div>
+                                    <p class="chosen-price">1  x   $250</p>
+                                </div>
+                            </a>
+                            <a class="cancel" href="#"><i class="fas fa-times-circle"></i></a>
                         </div>
                         <div class="total-cart">
                             <p class="total total-block">TOTAL <span class="total total-price">$500.00</span></p>
-                            <button class="button button__checkout">CHECKOUT</button>
-                            <button class="button button__start">Go to cart</button>
+                            <button class="buttonn buttonn__checkout">CHECKOUT</button>
+                            <button class="buttonn buttonn__start">Go to cart</button>
                         </div>
                     </div>
                 </div>
@@ -357,7 +369,7 @@
         <nav class="bread">
             <div class="container bread-box">
                 <h1 class="page-name">new arrivals</h1>
-                <nav aria-label="breadcrumb">
+                <nav class="breadcrumb">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a class="breadcrumb-link" href="index.html">Home</a></li>
                       <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">men</a></li>
@@ -423,7 +435,7 @@
                 </input>
             </div>
         </div>
-        <button type="submit" class="button button__checkout button__checkout_add"><i class="fas fa-shopping-cart"></i>add to cart</button>
+        <button type="submit" class="buttonn buttonn__checkout buttonn__checkout_add"><i class="fas fa-shopping-cart"></i>add to cart</button>
         </form>
     </section>
     </div>
