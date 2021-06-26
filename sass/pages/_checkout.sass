@@ -1,0 +1,94 @@
+.checkout
+    display: flex
+    flex-direction: column
+    margin-bottom: 93px
+
+.acrd-prod
+    width: 100%
+    border: none
+
+.accordion-button
+    border: none
+    border-top: 1px solid #e8e8e8
+    border-bottom: 1px solid #e8e8e8
+    font-size: 16px
+    @extend .font-bold
+    text-transform: uppercase
+    &::after
+        background-image: none
+    &:not(.collapsed)
+        border: none
+        box-shadow: none
+        color: #222222
+        background-color: #ffffff
+        &::after
+            background-image: none
+    &:focus
+        border: none
+        box-shadow: none
+
+.accordion-item
+    border: none
+
+.accordion-body
+    display: flex
+    margin-bottom: 80px
+
+.acrd-legend
+    @extend .font-regular
+    font-size: 13px
+    color: #222222
+    text-transform: uppercase
+    margin-bottom: 15px
+
+.acrd-legend-p
+    @extend .font-regular
+    color: #b3b2b2
+    line-height: 20px
+    font-size: 13px
+    &__margin
+        margin-bottom: 33px
+
+.register-guest
+    font-size: 12px
+    @extend .font-regular
+    color: #222222
+    margin-left: 14px
+    text-transform: uppercase
+    &_require
+        color: #ff0d0d
+    &__margin
+        margin: 27px auto 16px 0
+
+.radio-box
+    display: flex
+    flex-direction: column
+    margin-top: 30px
+    margin-bottom: 33px
+
+.box
+    margin: 0
+    &__flex
+        display: flex
+        align-items: center
+        margin-top: 32px
+
+.fa-angle-double-right
+    color: #b3b2b2
+    font-size: 12px
+    line-height: 10px
+
+.input-acrd
+    &:focus-visible
+        outline: none
+    &__margin
+        margin-bottom: 22px
+
+.forgot
+    @extend .font-regular
+    font-size: 14px
+    display: block
+    margin-left: 32px
+    color: #222222
+    &:hover
+        color: $brand-color

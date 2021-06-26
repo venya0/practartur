@@ -33,15 +33,16 @@
     flex-direction: column
     margin-bottom: 40px
     position: relative
-
-.item:hover 
-    box-shadow:  0px 5px 8px 0 rgba(0, 0, 0, 0.16)
-
-.item:hover .item-image 
-    filter: brightness(50%)
-
-.item:hover .add-box 
-    display: flex
+    &:hover 
+        box-shadow:  0px 5px 8px 0 rgba(0, 0, 0, 0.16)
+    &:hover .item-image 
+        filter: brightness(50%)
+    &:hover .add-box 
+        display: flex
+    &:hover .add-box__prod
+        flex-direction: column
+    &:hover .stars-prod
+        display: block    
 
 .link_item 
     text-decoration: none
@@ -67,16 +68,13 @@
     text-transform: uppercase
 
 .item-price 
-    font-family: Lato
     font-size: 16px
-    font-weight: bold
-    font-stretch: normal
-    font-style: normal
+    @extend .font-bold
     line-height: normal
     letter-spacing: normal
     text-align: left
     color: $brand-color
-    margin-top: 15px
+    margin: 15px 0 0 0
     &__single
         margin-left: 0
         align-self: flex-start
@@ -90,6 +88,8 @@
     padding: 8px
     &:hover
         box-shadow: 0px 1px 19px 0px rgba(255,255,255,0.75)
+    &_prod
+        border-radius: 3px
 
 .add-box 
     display: none
@@ -98,48 +98,46 @@
     width: 100%
 
 .add-to-cart 
-    font-family: Lato
     font-size: 13px
-    font-weight: bold
-    font-stretch: normal
-    font-style: normal
+    @extend .font-bold
     line-height: normal
     letter-spacing: normal
     text-align: left
     color: #ffffff
     margin-left: 8px
+    text-transform: capitalize
 
-.browse 
+.bttnn-box
     display: flex
+    width: 100%
     justify-content: center
 
-.details 
-    padding: 18px 18px 18px 0px
-    display: flex
-    justify-content: space-between
-    flex-wrap: wrap
-    width: 1140px
-
-.summary 
-    display: block
+.browse-bttnn 
     text-align: center
-
-.summary_products 
     background-color: $brand-color
     width: 212px
     height: 48px
-    font-family: Lato
     font-size: 16px
-    font-weight: bold
-    font-stretch: normal
-    font-style: normal
-    line-height: 3
+    @extend .font-bold
+    line-height: 48px
     letter-spacing: 0.4px
     text-align: center
     color: #ffffff
     border: 1px solid transparent
+    &:hover 
+        background-color: #ffffff
+        color: $brand-color
+        border: 1px solid #f16d7f
+    &:hover .fa-long-arrow-alt-right
+        background-color: #ffffff
+        color: $brand-color
 
-.summary_products:hover 
-    background-color: #ffffff
-    color: $brand-color
-    border: 1px solid #f16d7f
+.browse-bttn-link
+    width: 212px 
+    display: block   
+
+.fa-long-arrow-alt-right
+    font-size: 15px
+    line-height: 10px
+    color: #ffffff
+    
