@@ -34,6 +34,9 @@
 .dropdown_browse 
     position: relative
 
+.summary
+    list-style: none
+
 .summary_dropdown 
     width: 87px
     height: 38px
@@ -57,7 +60,7 @@
     border-radius: 5px
     border: 1px solid #e8e8e8
     top: 70px
-    z-index: 1
+    z-index: 3
     &::before
         content: ""
         display: block
@@ -153,8 +156,7 @@
     position: absolute
     top: 60px
     left: -15px
-    width: 255px
-    z-index: 1
+    z-index: 2
 
 .cart-info::before 
     content: ""
@@ -178,7 +180,6 @@
     padding-bottom: 16px
     border-bottom: 1px solid #ececec
     margin-bottom: 16px  
-
 
 .sinpage
     display: flex
@@ -246,6 +247,10 @@
     text-align: right
     padding-left: 130px
 
+.bttnn-a
+    width: 100%
+    display: block
+
 .cart-img 
     width: 32px
     height: 29px
@@ -295,9 +300,10 @@
 .menu-position 
     display: block
     position: relative
-
-.menu-position:hover .mega-box 
-    display: flex
+    &:hover .mega-box 
+        display: flex
+    &_prod
+        border-bottom: 3px solid $brand-color-bright 
 
 .mega-box 
     display: none
@@ -307,21 +313,17 @@
     background-color: #ffffff
     border: 1px solid #e7e7e7
     left: -110px
-
-.mega-box__third 
-    left: -175px
-
-.mega-box__fourth 
-    left: -250px
-
-.mega-box__fifth 
-    left: -380px
-
-.mega-box__sixth 
-    left: -500px
-
-.mega-box__seventh 
-    left: -620px
+    z-index: 2
+    &__third 
+        left: -175px
+    &__fourth 
+        left: -250px
+    &__fifth 
+        left: -380px
+    &__sixth 
+        left: -500px
+    &__seventh 
+        left: -620px
 
 .arrow::before 
     content: ""

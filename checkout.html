@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1d31a69545.js" crossorigin="anonymous"></script>    
+<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="header-border"> 
+            <div class="container common">
+                <div class="header-brand">
+                <a href="index.html" class="home"> <svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59px" height="51px">
+                        <image  x="0px" y="0px" width="59px" height="51px"  xlink:href="data:img/png;base64,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" />
+                    </svg>
+                    <p class="branding">BRAN<span class="branding_color">D</span></p>
+                    </a>
+                    <details class="dropdown_browse">
+                        <summary class="summary summary_dropdown">Browse <i class="fas fa-sort-down"></i></summary>
+                        <div class="details-browse">
+                            <h4 class="dropdown-m">Woman</h4>
+                            <a href="#" class="dropdown-links">Dresses</a>
+                            <a href="#" class="dropdown-links">Tops</a>
+                            <a href="#" class="dropdown-links">Sweaters/Knits</a>
+                            <a href="#" class="dropdown-links">Jackets/Coats</a>
+                            <a href="#" class="dropdown-links">Blazers</a>
+                            <a href="#" class="dropdown-links">Denim</a>
+                            <a href="#" class="dropdown-links">Leggings/Pants</a>
+                            <a href="#" class="dropdown-links">Skirts/Shorts</a>
+                            <a href="#" class="dropdown-links">Accessories</a>
+                            <a href="#" class="dropdown-links">Bags/Purses</a>
+                            <a href="#" class="dropdown-links">Swimwear/Underwear</a>
+                            <a href="#" class="dropdown-links">Nightwear</a>
+                            <a href="#" class="dropdown-links">Shoes</a>
+                            <a href="#" class="dropdown-links">Beauty</a>
+                            <h4 class="dropdown-m">Man</h4>
+                            <a href="#" class="dropdown-links">Tees/Tank tops</a>
+                            <a href="#" class="dropdown-links">Shirts/Polos</a>
+                            <a href="#" class="dropdown-links">Sweaters</a>
+                            <a href="#" class="dropdown-links">Sweatshirts/Hoodies</a>
+                            <a href="#" class="dropdown-links">Blazers</a>
+                            <a href="#" class="dropdown-links">Jackets/vests</a>
+                        </div>
+                    </details>
+                    <form class="form">
+                        <input type="search" placeholder="Search for item..." class="search-area">
+                        <button type="submit" class="submit">
+                        <img src="img/loupe.png"></src> 
+                    </button>
+                    </form>
+                </div>
+                <div class="cart-box">
+                    <div class="cart">
+                        <img src="img/cart.png" alt="cart" class="cart-img">
+                        <div class="cart-info">
+                            <div class="chosen-item">
+                                <a href="single page.html" class="sinpage">
+                                    <img src="img/chosen-1.jpg" alt="man T-shirt" class="chosen">
+                                    <div class="chosen-text-box">
+                                        <p class="chosen-name">Rebox Zane</p>
+                                        <div class="stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i></div>
+                                        <p class="chosen-price">1  x   $250</p>
+                                    </div>
+                                </a>
+                                <a class="cancel" href="#"><i class="fas fa-times-circle"></i></a>
+                            </div>
+                            <div class="chosen-item">
+                                <a href="single page.html" class="sinpage">
+                                    <img src="img/chosen-2.jpg" alt="woman dress" class="chosen">
+                                    <div class="chosen-text-box">
+                                        <p class="chosen-name">Rebox Zane</p>
+                                        <div class="stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i></div>
+                                        <p class="chosen-price">1  x   $250</p>
+                                    </div>
+                                </a>
+                                <a class="cancel" href="#"><i class="fas fa-times-circle"></i></a>
+                            </div>
+                            <div class="total-cart">
+                                <p class="total total-block">TOTAL <span class="total total-price">$500.00</span></p>
+                                <a class="bttnn-a" href="checkout.html"><button class="buttonn buttonn__checkout">CHECKOUT</button></a>
+                                <button class="buttonn buttonn__start">Go to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="account">My Account</button>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container menu-block">
+                <ul class="menu">
+                    <li class="menu-position">Home
+                        <div class="mega-box arrow">
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <a href="#" class="mega-link">Blazers</a>
+                                <a href="#" class="mega-link">Denim</a>
+                                <a href="#" class="mega-link">Leggings/Pants</a>
+                                <a href="#" class="mega-link">Skirts/Shorts</a>
+                                <a href="#" class="mega-link">Accessories</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <h4 class="mega-head mega-head__bottom">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <div class="sale">
+                                    <p class="super-sale">super sale!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-position menu-position_prod">Man
+                        <div class="mega-box arrow">
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <a href="#" class="mega-link">Blazers</a>
+                                <a href="#" class="mega-link">Denim</a>
+                                <a href="#" class="mega-link">Leggings/Pants</a>
+                                <a href="#" class="mega-link">Skirts/Shorts</a>
+                                <a href="#" class="mega-link">Accessories</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <h4 class="mega-head mega-head__bottom">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <div class="sale">
+                                    <p class="super-sale">super sale!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-position">Woman
+                        <div class="mega-box mega-box__third arrow__woman">
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <a href="#" class="mega-link">Blazers</a>
+                                <a href="#" class="mega-link">Denim</a>
+                                <a href="#" class="mega-link">Leggings/Pants</a>
+                                <a href="#" class="mega-link">Skirts/Shorts</a>
+                                <a href="#" class="mega-link">Accessories</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <h4 class="mega-head mega-head__bottom">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <div class="sale">
+                                    <p class="super-sale">super sale!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-position">Kids
+                        <div class="mega-box mega-box__fourth arrow__kids">
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <a href="#" class="mega-link">Blazers</a>
+                                <a href="#" class="mega-link">Denim</a>
+                                <a href="#" class="mega-link">Leggings/Pants</a>
+                                <a href="#" class="mega-link">Skirts/Shorts</a>
+                                <a href="#" class="mega-link">Accessories</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <h4 class="mega-head mega-head__bottom">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <div class="sale">
+                                    <p class="super-sale">super sale!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-position">Accesoriese
+                        <div class="mega-box mega-box__fifth arrow__accesories">
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <a href="#" class="mega-link">Blazers</a>
+                                <a href="#" class="mega-link">Denim</a>
+                                <a href="#" class="mega-link">Leggings/Pants</a>
+                                <a href="#" class="mega-link">Skirts/Shorts</a>
+                                <a href="#" class="mega-link">Accessories</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <h4 class="mega-head mega-head__bottom">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <div class="sale">
+                                    <p class="super-sale">super sale!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-position">Featured
+                        <div class="mega-box mega-box__sixth arrow__featured">
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <a href="#" class="mega-link">Blazers</a>
+                                <a href="#" class="mega-link">Denim</a>
+                                <a href="#" class="mega-link">Leggings/Pants</a>
+                                <a href="#" class="mega-link">Skirts/Shorts</a>
+                                <a href="#" class="mega-link">Accessories</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <h4 class="mega-head mega-head__bottom">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <div class="sale">
+                                    <p class="super-sale">super sale!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-position">Hot deals
+                        <div class="mega-box mega-box__seventh arrow__deals">
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <a href="#" class="mega-link">Blazers</a>
+                                <a href="#" class="mega-link">Denim</a>
+                                <a href="#" class="mega-link">Leggings/Pants</a>
+                                <a href="#" class="mega-link">Skirts/Shorts</a>
+                                <a href="#" class="mega-link">Accessories</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <h4 class="mega-head mega-head__bottom">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4 class="mega-head">Woman</h4>
+                                <a href="#" class="mega-link">Dresses</a>
+                                <a href="#" class="mega-link">Tops</a>
+                                <a href="#" class="mega-link">Sweaters/Knits</a>
+                                <a href="#" class="mega-link">Jackets/Coats</a>
+                                <div class="sale">
+                                    <p class="super-sale">super sale!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <nav class="bread">
+        <div class="container bread-box">
+            <h1 class="page-name">new arrivals</h1>
+            <nav class="breadcrumb">
+                <ol class="crumbs-box">
+                  <li class="breadcrumb-piece"><a class="breadcrumb-link" href="index.html">Home</a></li>
+                  <li class="breadcrumb-piece"><a class="breadcrumb-link" href="#">men</a></li>
+                  <li class="breadcrumb-piece breadcrumb-link breadcrumb-link_this" aria-current="page">new arrivals</li>
+                </ol>
+            </nav>
+        </div>
+    </nav>
+    <div class="container checkout">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <div class="accordion acrd-prod" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    01.   Shipping Adress
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+                    <div class="check-guest">
+                        <form action="#">
+                            <legend class="acrd-legend">
+                                Check as a guest or register
+                            </legend>
+                            <p class="acrd-legend-p">
+                                Register with us for future convenience
+                            </p>
+                            <div class="radio-box">
+                                <div class="box"><input type="radio" name="guest" id="guest"><label for="guest" class="register-guest">checkout as guest</label></div>
+                                <div class="box"><input type="radio" name="guest" id="register"><label for="register" class="register-guest">register</label></div>
+                            </div>
+                            <p class="acrd-legend">
+                                register and save time!
+                            </p>
+                            <p class="acrd-legend-p acrd-legend-p__margin">
+                                Register with us for future convenience
+                            </p>
+                            <p class="acrd-legend-p">
+                                <i class="fas fa-angle-double-right"></i> Fast and easy checkout
+                            </p>
+                            <p class="acrd-legend-p">
+                                <i class="fas fa-angle-double-right"></i> Easy access to your order history and status
+                            </p>
+                            <button class="buttonn buttonn__continue">continue</button>
+                        </form>
+                    </div>
+                    <div class="register">
+                        <form action="#">
+                            <legend class="acrd-legend">
+                                Already registed?
+                            </legend>
+                            <p class="acrd-legend-p">
+                                Please log in below
+                            </p>
+                            <label for="email" class="register-guest register-guest__margin">EMAIL ADDRESS <span class="register-guest_require"> *</span></label><br>
+                            <input type="email" name="email" id="email" required class="input-acrd"><br>
+                            <label for="password" class="register-guest register-guest__margin">password <span class="register-guest_require"> *</span></label><br>
+                            <input type="password" name="password" id="password" required class="input-acrd input-acrd__margin">
+                            <p class="acrd-legend-p register-guest_require">* Required Fileds</p>
+                            <div class="box box__flex">
+                                <button class="buttonn buttonn__log">Log in</button>
+                                <a href="#" class="forgot">Forgot Password ?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    02.   BILLING INFORMATION
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                  <div>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, aspernatur consequuntur vitae ab unde excepturi tempora error dolore facilis cum? Alias assumenda ullam voluptas earum ipsa suscipit cum, sapiente libero!
+                      Recusandae, architecto. Ab aliquam iure molestiae, non alias unde nisi earum similique natus quidem sint explicabo repellat fugit dicta. Maxime officia cumque laborum maiores dicta atque mollitia excepturi, ipsam eos.
+                      Excepturi dolorum sit deleniti tenetur cupiditate, saepe nam omnis distinctio quae perferendis dignissimos doloribus quod, in aspernatur, consectetur consequatur explicabo atque molestias velit dolor natus. Numquam et obcaecati suscipit atque?
+                      Impedit, mollitia? Vel saepe, nostrum vitae inventore quod natus est doloribus voluptas ipsum! Sint, reiciendis minima, impedit dolor rerum atque explicabo dolore, nobis vitae non nesciunt voluptates quos facere corrupti.
+                      Officiis, delectus voluptates qui nobis, vitae quod id, eos a odio laboriosam modi maiores amet possimus deleniti dolores corporis ea. Iure minima sapiente doloribus dolore qui aspernatur voluptate ex! Eligendi.
+                      Tempore commodi vel dolor. Harum aliquam architecto laudantium, quae deleniti labore quam incidunt voluptates eos odio quidem, vero esse vitae ex voluptatem obcaecati delectus numquam voluptas! Vel veritatis possimus aliquam.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    03.   SHIPPING INFORMATION
+                   </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body">
+                  <div>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque asperiores illum aut totam aliquid tempora debitis minima id animi quo cum nobis qui fugit fugiat, impedit corrupti labore sequi libero!
+                      Ipsum vero id doloribus deleniti nesciunt fugit. Minima quidem, nisi corrupti nesciunt illum dicta, iure labore quisquam perspiciatis accusamus quod, saepe autem consequuntur id enim tempora? Explicabo debitis voluptate quam!
+                      Error id a praesentium nihil optio nesciunt incidunt beatae. Obcaecati error dolores, labore tempora ab saepe culpa natus, aperiam aspernatur nostrum distinctio sunt dolore eum laboriosam quas odio ipsam harum.
+                      Quod in autem, consequatur eos corporis inventore cum optio eveniet? Consequatur eveniet tempore quo, maxime accusantium, explicabo deleniti dolorem excepturi magnam distinctio deserunt consectetur illo harum exercitationem velit. Voluptatum, molestias?
+                      Adipisci, commodi quasi maiores deleniti, quibusdam nisi quo beatae reprehenderit inventore obcaecati autem doloremque et sed ad sequi voluptates alias, consequatur dignissimos incidunt praesentium velit labore. Est deleniti ad ipsam!
+                      Obcaecati, explicabo, at quidem dolores in impedit neque dignissimos atque nulla est excepturi asperiores deleniti ea ab consequatur blanditiis sit magnam sed voluptate ut quas placeat possimus esse facere! Corporis?
+                      Ullam officia amet aspernatur illo totam quae reiciendis? Reprehenderit sed enim eos ratione dolorum labore ab, voluptatum impedit fuga sequi. Laudantium sapiente in magni repudiandae quibusdam fugiat autem nihil. Minus.
+                      A, perferendis sapiente aliquam odio neque rerum, tenetur amet inventore fuga maiores veniam. Sed nam consectetur cum illo delectus sunt neque autem amet ratione officia. Veritatis omnis neque sit necessitatibus!
+                      Nam aliquid maxime nesciunt, amet eligendi atque minima perspiciatis nemo? Hic adipisci distinctio dolorem vitae nostrum ea, modi in laudantium iste natus commodi assumenda quasi praesentium veritatis quae doloremque architecto.
+                      Eius incidunt obcaecati vero at reprehenderit officiis aut explicabo soluta totam! Nesciunt ea a voluptatem corporis perspiciatis aliquid tenetur reprehenderit odit odio nihil blanditiis deserunt, eius quae voluptatum nemo reiciendis!
+                      Tempora eaque rerum laborum ab saepe accusantium sit id earum, molestias esse, delectus blanditiis natus veniam vel rem incidunt qui recusandae eligendi excepturi quibusdam quia dolor. Doloremque sapiente quod suscipit!
+                      Culpa omnis, voluptatem soluta repudiandae inventore at vero modi tempore maxime consectetur blanditiis aliquam doloremque velit dignissimos incidunt eligendi! Sed quidem explicabo earum praesentium? Officiis sed deserunt enim aperiam magni?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                    04.   SHIPPING METHOD
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                  <div class="accordion-body">
+                    <div>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque asperiores illum aut totam aliquid tempora debitis minima id animi quo cum nobis qui fugit fugiat, impedit corrupti labore sequi libero!
+                        Ipsum vero id doloribus deleniti nesciunt fugit. Minima quidem, nisi corrupti nesciunt illum dicta, iure labore quisquam perspiciatis accusamus quod, saepe autem consequuntur id enim tempora? Explicabo debitis voluptate quam!
+                        Error id a praesentium nihil optio nesciunt incidunt beatae. Obcaecati error dolores, labore tempora ab saepe culpa natus, aperiam aspernatur nostrum distinctio sunt dolore eum laboriosam quas odio ipsam harum.
+                        Quod in autem, consequatur eos corporis inventore cum optio eveniet? Consequatur eveniet tempore quo, maxime accusantium, explicabo deleniti dolorem excepturi magnam distinctio deserunt consectetur illo harum exercitationem velit. Voluptatum, molestias?
+                        Adipisci, commodi quasi maiores deleniti, quibusdam nisi quo beatae reprehenderit inventore obcaecati autem doloremque et sed ad sequi voluptates alias, consequatur dignissimos incidunt praesentium velit labore. Est deleniti ad ipsam!
+                        Obcaecati, explicabo, at quidem dolores in impedit neque dignissimos atque nulla est excepturi asperiores deleniti ea ab consequatur blanditiis sit magnam sed voluptate ut quas placeat possimus esse facere! Corporis?
+                        Ullam officia amet aspernatur illo totam quae reiciendis? Reprehenderit sed enim eos ratione dolorum labore ab, voluptatum impedit fuga sequi. Laudantium sapiente in magni repudiandae quibusdam fugiat autem nihil. Minus.
+                        A, perferendis sapiente aliquam odio neque rerum, tenetur amet inventore fuga maiores veniam. Sed nam consectetur cum illo delectus sunt neque autem amet ratione officia. Veritatis omnis neque sit necessitatibus!
+                        Nam aliquid maxime nesciunt, amet eligendi atque minima perspiciatis nemo? Hic adipisci distinctio dolorem vitae nostrum ea, modi in laudantium iste natus commodi assumenda quasi praesentium veritatis quae doloremque architecto.
+                        Eius incidunt obcaecati vero at reprehenderit officiis aut explicabo soluta totam! Nesciunt ea a voluptatem corporis perspiciatis aliquid tenetur reprehenderit odit odio nihil blanditiis deserunt, eius quae voluptatum nemo reiciendis!
+                        Tempora eaque rerum laborum ab saepe accusantium sit id earum, molestias esse, delectus blanditiis natus veniam vel rem incidunt qui recusandae eligendi excepturi quibusdam quia dolor. Doloremque sapiente quod suscipit!
+                        Culpa omnis, voluptatem soluta repudiandae inventore at vero modi tempore maxime consectetur blanditiis aliquam doloremque velit dignissimos incidunt eligendi! Sed quidem explicabo earum praesentium? Officiis sed deserunt enim aperiam magni?</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                    05.   PAYMENT METHOD
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                  <div class="accordion-body">
+                    <div>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque asperiores illum aut totam aliquid tempora debitis minima id animi quo cum nobis qui fugit fugiat, impedit corrupti labore sequi libero!
+                        Ipsum vero id doloribus deleniti nesciunt fugit. Minima quidem, nisi corrupti nesciunt illum dicta, iure labore quisquam perspiciatis accusamus quod, saepe autem consequuntur id enim tempora? Explicabo debitis voluptate quam!
+                        Error id a praesentium nihil optio nesciunt incidunt beatae. Obcaecati error dolores, labore tempora ab saepe culpa natus, aperiam aspernatur nostrum distinctio sunt dolore eum laboriosam quas odio ipsam harum.
+                        Quod in autem, consequatur eos corporis inventore cum optio eveniet? Consequatur eveniet tempore quo, maxime accusantium, explicabo deleniti dolorem excepturi magnam distinctio deserunt consectetur illo harum exercitationem velit. Voluptatum, molestias?
+                        Adipisci, commodi quasi maiores deleniti, quibusdam nisi quo beatae reprehenderit inventore obcaecati autem doloremque et sed ad sequi voluptates alias, consequatur dignissimos incidunt praesentium velit labore. Est deleniti ad ipsam!
+                        Obcaecati, explicabo, at quidem dolores in impedit neque dignissimos atque nulla est excepturi asperiores deleniti ea ab consequatur blanditiis sit magnam sed voluptate ut quas placeat possimus esse facere! Corporis?
+                        Ullam officia amet aspernatur illo totam quae reiciendis? Reprehenderit sed enim eos ratione dolorum labore ab, voluptatum impedit fuga sequi. Laudantium sapiente in magni repudiandae quibusdam fugiat autem nihil. Minus.
+                        A, perferendis sapiente aliquam odio neque rerum, tenetur amet inventore fuga maiores veniam. Sed nam consectetur cum illo delectus sunt neque autem amet ratione officia. Veritatis omnis neque sit necessitatibus!
+                        Nam aliquid maxime nesciunt, amet eligendi atque minima perspiciatis nemo? Hic adipisci distinctio dolorem vitae nostrum ea, modi in laudantium iste natus commodi assumenda quasi praesentium veritatis quae doloremque architecto.
+                        Eius incidunt obcaecati vero at reprehenderit officiis aut explicabo soluta totam! Nesciunt ea a voluptatem corporis perspiciatis aliquid tenetur reprehenderit odit odio nihil blanditiis deserunt, eius quae voluptatum nemo reiciendis!
+                        Tempora eaque rerum laborum ab saepe accusantium sit id earum, molestias esse, delectus blanditiis natus veniam vel rem incidunt qui recusandae eligendi excepturi quibusdam quia dolor. Doloremque sapiente quod suscipit!
+                        Culpa omnis, voluptatem soluta repudiandae inventore at vero modi tempore maxime consectetur blanditiis aliquam doloremque velit dignissimos incidunt eligendi! Sed quidem explicabo earum praesentium? Officiis sed deserunt enim aperiam magni?</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                    06.   ORDER REVIEW
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+                  <div class="accordion-body">
+                    <div>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque asperiores illum aut totam aliquid tempora debitis minima id animi quo cum nobis qui fugit fugiat, impedit corrupti labore sequi libero!
+                        Ipsum vero id doloribus deleniti nesciunt fugit. Minima quidem, nisi corrupti nesciunt illum dicta, iure labore quisquam perspiciatis accusamus quod, saepe autem consequuntur id enim tempora? Explicabo debitis voluptate quam!
+                        Error id a praesentium nihil optio nesciunt incidunt beatae. Obcaecati error dolores, labore tempora ab saepe culpa natus, aperiam aspernatur nostrum distinctio sunt dolore eum laboriosam quas odio ipsam harum.
+                        Quod in autem, consequatur eos corporis inventore cum optio eveniet? Consequatur eveniet tempore quo, maxime accusantium, explicabo deleniti dolorem excepturi magnam distinctio deserunt consectetur illo harum exercitationem velit. Voluptatum, molestias?
+                        Adipisci, commodi quasi maiores deleniti, quibusdam nisi quo beatae reprehenderit inventore obcaecati autem doloremque et sed ad sequi voluptates alias, consequatur dignissimos incidunt praesentium velit labore. Est deleniti ad ipsam!
+                        Obcaecati, explicabo, at quidem dolores in impedit neque dignissimos atque nulla est excepturi asperiores deleniti ea ab consequatur blanditiis sit magnam sed voluptate ut quas placeat possimus esse facere! Corporis?
+                        Ullam officia amet aspernatur illo totam quae reiciendis? Reprehenderit sed enim eos ratione dolorum labore ab, voluptatum impedit fuga sequi. Laudantium sapiente in magni repudiandae quibusdam fugiat autem nihil. Minus.
+                        A, perferendis sapiente aliquam odio neque rerum, tenetur amet inventore fuga maiores veniam. Sed nam consectetur cum illo delectus sunt neque autem amet ratione officia. Veritatis omnis neque sit necessitatibus!
+                        Nam aliquid maxime nesciunt, amet eligendi atque minima perspiciatis nemo? Hic adipisci distinctio dolorem vitae nostrum ea, modi in laudantium iste natus commodi assumenda quasi praesentium veritatis quae doloremque architecto.
+                        Eius incidunt obcaecati vero at reprehenderit officiis aut explicabo soluta totam! Nesciunt ea a voluptatem corporis perspiciatis aliquid tenetur reprehenderit odit odio nihil blanditiis deserunt, eius quae voluptatum nemo reiciendis!
+                        Tempora eaque rerum laborum ab saepe accusantium sit id earum, molestias esse, delectus blanditiis natus veniam vel rem incidunt qui recusandae eligendi excepturi quibusdam quia dolor. Doloremque sapiente quod suscipit!
+                        Culpa omnis, voluptatem soluta repudiandae inventore at vero modi tempore maxime consectetur blanditiis aliquam doloremque velit dignissimos incidunt eligendi! Sed quidem explicabo earum praesentium? Officiis sed deserunt enim aperiam magni?</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+    <footer>
+        <section class="feedback">
+           <div class="container feedback-box">
+                <div class="comment">
+                    <img src="img/comment.jpg" alt="comment" class="comment-img">
+                    <div class="comment-box">
+                        <p class="comment-text">
+                            “Vestibulum quis porttitor dui! Quisque viverra nunc mi, 
+                            a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
+                        </p>
+                        <p class="comment-author">
+                            Bin Burhan
+                        </p>
+                        <p class="comment-place">
+                            Dhaka, Bd
+                        </p>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="subscribe">
+                    <h5 class="subscribe-heading">
+                        Subscribe
+                    </h5>
+                    <p class="subscribe-text">
+                        FOR OUR NEWLETTER AND PROMOTION
+                    </p>
+                    <form action="" class="subscribe-form">
+                        <input type="email" placeholder="Enter Your Email" class="mail">
+                        <button type="submit" class="submit_mail">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+           
+        </section>
+        <section class="container footer-info">
+            <div class="info-brand">
+                    <a href="index.html" class="home"> <svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59px" height="51px">
+                        <image  x="0px" y="0px" width="59px" height="51px"  xlink:href="data:img/png;base64,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" />
+                    </svg>
+                    <p class="branding">BRAN<span class="branding_color">D</span></p>
+                    </a>
+                    <p class="brand-desc">
+                        Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.
+                    </p>
+                    <p class="brand-desc">
+                        Efficiently plagiarize 24/365 action items and focused infomediaries.
+                        Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+                    </p>
+                </div>
+                <div class="info-ul">
+                    <h4 class="info-heading">COMPANY</h4>
+                    <ul>
+                        <li class="info-li"><a href="#" class="info-li-a">Home</a></li>
+                        <li class="info-li"><a href="#" class="info-li-a">Shop</a></li>
+                        <li class="info-li"><a href="#" class="info-li-a">About</a></li>
+                        <li class="info-li"><a href="#" class="info-li-a">How It Works</a></li>
+                        <li class="info-li"><a href="#" class="info-li-a">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="info-ul">
+                    <h4 class="info-heading">INFORMATION</h4>
+                    <ul>
+                        <li class="info-li"><a href="#" class="info-li-a">Tearms & Condition</a></li>
+                        <li class="info-li"><a href="#" class="info-li-a">Privacy Policy</a></li>
+                        <li class="info-li"><a href="#" class="info-li-a">How to Buy</a></li>
+                        <li class="info-li"><a href="#" class="info-li-a">How to Sell</a></li>
+                        <li class="info-li"><a href="#" class="info-li-a">Promotion</a></li>
+                    </ul>
+                </div>
+                <div class="info-ul">
+                    <h4 class="info-heading">SHOP CATEGORY</h4>
+                    <ul>
+                        <li class="info-li"><a href="#" class="info-li-a">Men</a></li>
+                        <li class="info-li"><a href="#" class="info-li-a">Women</a></li>
+                        <li class="info-li"><a href="#" class="info-li-a">Child</a></li>
+                        <li class="info-li"><a href="#" class="info-li-a">Apparel</a></li>
+                        <li class="info-li"><a href="#" class="info-li-a">Browse All</a></li>
+                    </ul>
+                </div>
+        </section>
+        <section class="copyright">
+            <div class="container">
+                <div class="copy-box">
+                    <p class="rights">© 2017  Brand  All Rights Reserved.</p>
+                    <div class="icons-box">
+                        <div class="icon">
+                            <i class="fab fa-facebook-square"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-twitter-square"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-instagram-square"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-pinterest-square"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-google-plus-square"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

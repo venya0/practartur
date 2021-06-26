@@ -36,14 +36,24 @@
 .advantages-description-box 
     display: flex
     padding: 40px 40px 20px 40px
+    &:last-of-type 
+        padding-bottom: 60px
+    &__prod
+        flex-direction: column
+        align-items: center
 
-.advantages-description-box:last-of-type 
-    padding-bottom: 60px
+.advantages-description
+    display: flex
+    flex-direction: column
+    &__prod
+        flex-direction: row  
 
 .advantages-img 
     width: 45px
     height: 32px
     margin-right: 33px
+    &__prod
+        margin: 0
 
 .advantages-description-heading 
     font-family: Lato
@@ -56,6 +66,9 @@
     text-align: left
     color: #fbfbfb
     margin-bottom: 17px
+    &__prod
+        text-align: center
+        margin-top: 30px
 
 .advantages-description-text 
     font-family: Lato
