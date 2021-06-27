@@ -1,0 +1,148 @@
+.prod-cart
+    display: flex
+    flex-direction: column
+    margin-top: 90px
+
+.cart-rows
+    display: flex
+    justify-content: space-between
+    width: 100%
+    padding: 0 0 20px 0
+    border-bottom: 1px solid #eaeaea
+    margin: 22px 0 0 0
+
+.cart-col
+    margin-left: 20px
+    width: 60px
+    display: flex
+    align-items: center
+    &__prod
+        margin-left: 0px
+        display: flex
+        align-items: center
+    &__head
+        margin-left: 10px
+    &:first-of-type
+        margin-left: 0
+    &__details
+        margin-right: 200px
+
+.cart-head
+    @extend .font-bold
+    font-size: 13px
+    text-transform: uppercase
+    color: #222222
+    &:first-of-type
+        margin-left: 0
+
+.prod-box-cart
+    display: flex
+    justify-content: space-between
+
+.txt-box-cart
+    margin-left: 21px
+
+.name-cart
+    @extend .font-regular
+    font-size: 13px
+    text-transform: uppercase
+    color: #222222
+    margin-bottom: 38px
+
+.img-prod-cart
+    width: 100px
+    height: 115px
+
+.desc-cart
+    color: #575757
+    @extend .font-regular
+    font-size: 13px
+    line-height: 1.54
+    text-transform: capitalize
+    &_lite
+        @extend .font-light
+        color: #6f6e6e
+    &_color
+        color: #656565
+
+.quantity-cart
+    width: 54px
+    height: 30px
+    padding-left: 10px
+    border: 1px solid #eaeaea
+    &:focus-visible
+        outline: none
+
+.bttnn-box-cart
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 44px
+
+.form-box-cart
+    display: flex
+    justify-content: space-between
+    margin: 40px auto 80px auto
+
+.adress-cart
+    display: flex
+    flex-direction: column
+    width: 360px
+    margin-right: 36px
+
+.form-heading-cart
+    @extend .font-bold
+    font-size: 16px
+    text-transform: uppercase
+    color: #222222
+    margin-left: 0
+
+.adress-select
+    margin: 22px 0 20px 0
+    padding: 16px 14px 16px 18px
+    border: solid 1px #eaeaea
+    background-color: #ffffff
+    &:focus-visible 
+        outline: none
+
+.adress-input
+    padding: 16px
+    font-size: 13px
+    border: solid 1px #eaeaea
+    margin-bottom: 20px
+    width: 320px
+    &:focus-visible 
+        outline: none
+    
+.coupon
+    @extend .font-regular
+    font-size: 14px
+    margin: 28px 0 24px 0
+
+.total-cart-box
+    display: flex
+    flex-direction: column
+    justify-content: end
+    padding: 44px
+    background-color: #f5f3f3
+    height: 140px
+
+.subtotal-cart
+    font-size: 11px
+    color: #4a4a4a
+    @extend .font-regular
+    margin-right: 0
+    margin-bottom: 14px
+
+.grandtotal-cart
+    @extend .font-bold
+    color: #222222
+    font-size: 16px
+    margin-right: 0
+    &_color
+        color: $brand-color
+
+.cart-hr
+    color: #e2e2e2
+    width: 275px
+    margin-top: 22px

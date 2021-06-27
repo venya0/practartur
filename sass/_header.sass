@@ -225,8 +225,12 @@
     display: block
     margin: 0px
 
-.cancel:hover .fa-times-circle 
-    color: $brand-color
+.cancel
+    &_button
+        background: none
+        border: none
+    &:hover .fa-times-circle 
+        color: $brand-color
 
 .fa-times-circle 
     display: flex
@@ -267,11 +271,17 @@
     text-align: center
     color: #ffffff
     border: 1px solid transparent
-
-.account:hover 
-    background-color: #ffffff
-    color: $brand-color
-    border: 1px solid $brand-color
+    &:hover 
+        background-color: #ffffff
+        color: $brand-color
+        border: 1px solid $brand-color
+    &__bttnn
+        margin: 17px 0 0 0
+        width: 273px
+        height: 50px
+        @extend .font-bold
+        font-size: 16px
+        text-transform: uppercase
 
 .header-border 
     border-bottom: 1px solid #e8e8e8
