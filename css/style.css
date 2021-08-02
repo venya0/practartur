@@ -109,6 +109,7 @@ a {
   letter-spacing: 0.35px;
   text-align: center;
   color: #222222;
+  box-sizing: border-box;
 }
 
 .details-browse {
@@ -583,6 +584,31 @@ a {
   display: flex;
   justify-content: right;
   align-items: flex-end;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
 }
 
 .super-sale {
@@ -1527,12 +1553,21 @@ a {
   text-align: left;
   padding-left: 0;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .accord-name::after {
   content: " \25bc";
   font-size: 14px;
   margin-left: 130px;
+}
+
+.accord-name__brand::after {
+  margin-left: 153px;
+}
+
+.accord-name__designer::after {
+  margin-left: 135px;
 }
 
 .accord-box {
@@ -1567,6 +1602,7 @@ a {
   width: 190px;
   display: flex;
   flex-direction: column;
+  margin-left: 0px;
 }
 
 .form-head {
@@ -1604,10 +1640,20 @@ a {
 .size {
   width: 205px;
   display: flex;
+  flex-direction: column;
   float: right;
   justify-content: flex-start;
   padding: 0;
-  margin-left: 104px;
+  margin-left: 0px;
+}
+
+.size-heading {
+  width: 100%;
+}
+
+.size-boxes {
+  display: flex;
+  justify-content: space-between;
 }
 
 .sizes-box {
